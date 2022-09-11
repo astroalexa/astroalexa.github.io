@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Assignment</title>
+</head>
+<body>
+    <h1>
+        Exam Assignment
+    </h1>
+    <form action="name" name="myForm" >
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+        <br><br>
+        <label for="math">Math</label>
+        <input type="text" name="math" id="math">
+        <br><br>
+        <label for="phy">Physics</label>
+        <input type="text" name="phy" id="phy">
+        <br><br>
+        <label for="chem">Cheistry</label>
+        <input type="text" name="chem" id="chem">
+        <br><br>
+        <label for="bio">Biology</label>
+        <input type="text" name="bio" id="bio">
+        <br><br>
+        <button type="button" onclick="result ()">Result</button>
+    </form>
+
+        <script>
+            function result () {
+                //alert ('Hello')
+                let name = document.myForm.name.value
+                console.log(name);
+                let math = document.myForm.math.value
+                console.log(math);
+                let phy= document.myForm.phy.value
+                console.log(phy);
+                let chem = document.myForm.chem.value
+                console.log(chem);
+                let bio = document.myForm.bio.value
+                console.log(bio);
+
+                if (math >= 40 && phy>= 40 && chem >= 40 && bio>= 40){
+                    document.write('<h1>'+name+' is Pass.</h1>') ;
+                    document.write('<h1> Math='+math+'</h1>') ;
+                    document.write('<h1> Phy='+phy+'</h1>') ;
+                    document.write('<h1> Chem='+chem+'</h1>') ;
+                    document.write('<h1> Bio='+bio+'</h1>') ;
+                }else if (math <= 40 && phy <= 40 && chem<= 40 && bio <= 40){
+                    document .write('<h1>'+name+' is Fail!</h1>') ;
+                    document.write('<h1>Math='+math+'</h1>')
+                    document.write('<h1>Phy='+phy+'</h1>')
+                    document.write( '<h1>Chem='+chem+'</h1>')
+                    document.write('<h1>Bio='+bio+'</h1>')
+                }
+                if ( math >=80 && phy >= 80 && chem >= 80 && bio >=80 ) {
+                    document.write('<h1> Distinctions in all subjects!</h1>');
+                } if (math >=40 && phy>=40 && chem>=40 && bio>=80 ){
+                    document.write('<h1>Distinctions in Bio</h1>')
+                }else if (chem >= 80 ){
+                    document.write('<h1>Distinctions in Chem</h1>')
+                }else if (phy >= 80){
+                    document.write('<h1>Distinctions in Phy</h1>')
+                }else if ( math >= 80 ){
+                    document.write('<h1>Distinction in Math</h1>')
+                }if (math>=40 && phy>=40 && chem >= 80 && bio >= 80){
+                    document.write('<h1>Chem</h1>')
+                }else if ( math >= 80 && phy >= 80){
+                    document.write('<h1> Math</h1>')
+                }else if ( phy >= 80 && chem >= 80 ){
+                    document.write('<h1>Phy</h1>')
+                }else if ( math >= 80 && chem>=80){
+                    document.write('<h1>in Math</h1>')
+                }else if ( phy >= 80 &&  bio >= 80){
+                    document.write('<h1> Phy</h1>')
+                }if ( math>=40 && phy>=80 && chem>=80 && bio>=80){
+                    document.write( '<h1>Phy</h1>')
+                }else if (math>=80 && phy>= 80 && chem>=80){
+                    document.write('<h1> Phy</h1>')
+                }else if (math>=80 && chem>=80 && bio>=80){
+                    document.write('<h1> Math </h1>')
+                }else if (math>=80 && phy>=80 && bio>=80){
+                    document.write('<h1> Phy</h1>')
+                } 
+            }
+        </script>
+    </form>
+</body>
+</html>
